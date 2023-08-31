@@ -232,7 +232,7 @@ layout: two-cols
         call_indirect (param) (result)
     )
     (func $a)
-    (func $not-reachable)
+    (func $b)
     (table $table 2 funcref)
     (elem $table (i32.const 0) $a $b)
 )
@@ -359,7 +359,7 @@ Measured on **8.392** binaries from the WasmBench dataset.
 
 Of those binaries...
 * 95% have no `.debug` section (*FunctionIndices*)
-* 83% have at least one indirect call (*TableIncirection*)
+* 83% have at least one indirect call (*TableIndirection*)
 * 92% have at least one imported function (*HostCallbacks*)
 * 95% have at least one store instruction (*MemoryMutable*)
 
